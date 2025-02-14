@@ -1,0 +1,152 @@
+/* Fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@500&display=swap');
+
+/* Estilos generales */
+body {
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    color: #5a3d5c;
+    font-family: 'Playfair Display', serif;
+}
+/* Animación de cambio suave de colores de fondo */
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    }
+    25% {
+        background: linear-gradient(to right, #f7c6d7, #bfa6d0);
+    }
+    50% {
+        background: linear-gradient(to right, #f2c8d5, #f4e1d2);
+    }
+    75% {
+        background: linear-gradient(to right, #e9c1d3, #d3a9d9);
+    }
+    100% {
+        background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    }
+}
+
+/* Animación de flores flotantes (girasoles, rosas, margaritas) */
+@keyframes floatingFlowers {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+.floating-flower {
+    position: absolute;
+    font-size: 3rem;
+    color: #f7b32b; /* Un tono amarillo brillante */
+    animation: floatingFlowers 10s infinite ease-in-out;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Animación de burbujas flotantes */
+@keyframes floatingBubbles {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-150px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.floating-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    height: 40px;
+    animation: floatingBubbles 12s infinite ease-in-out;
+    pointer-events: none;
+}
+
+/* Añadir un efecto de niebla sutil */
+@keyframes fogEffect {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.fog {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: fogEffect 8s infinite ease-in-out;
+}
+
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.romantic-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Mejoras de accesibilidad y UX */
+button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f472b6; /* Un tono más suave */
+    transform: scale(1.1);
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-item {
+    min-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.carousel-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.left {
+    left: 10px;
+}
+.right {
+    right: 10px;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi amor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.ico/favicon-32x32.png">
+</head>
+<body class="text-gray-800">
+     <!-- Niebla animada en el fondo -->
+     <div class="fog"></div>
+
+     <!-- Flores flotantes -->
+     <div class="floating-flower" style="top: 10%; left: 15%; animation-delay: 0s;">🌻</div>
+     <div class="floating-flower" style="top: 20%; left: 40%; animation-delay: 3s;">🌼</div>
+     <div class="floating-flower" style="top: 35%; left: 70%; animation-delay: 5s;">🌷</div>
+     <div class="floating-flower" style="top: 50%; left: 25%; animation-delay: 8s;">🌸</div>
+     <div class="floating-flower" style="top: 60%; left: 80%; animation-delay: 2s;">🌺</div>
+ 
+     <!-- Burbujas flotantes -->
+     <div class="floating-bubble" style="top: 15%; left: 10%; animation-delay: 0s;"></div>
+     <div class="floating-bubble" style="top: 25%; left: 60%; animation-delay: 2s;"></div>
+     <div class="floating-bubble" style="top: 40%; left: 30%; animation-delay: 4s;"></div>
+     <div class="floating-bubble" style="top: 50%; left: 70%; animation-delay: 6s;"></div>
+     <div class="floating-bubble" style="top: 60%; left: 20%; animation-delay: 8s;"></div>
+ 
+    <audio id="audio" autoplay loop>
+        <source src="musica_romantica.mp3" type="audio/mpeg">
+        
+    </audio>
+    
+    <div class="flex flex-col items-center justify-center min-h-screen text-center">
+        <h1 class="text-6xl font-bold text-pink-700 fade-in romantic-font">Para Ti, Mi Amor 💖</h1>
+        <p class="mt-4 text-2xl italic">Eres mi razón de ser y mi felicidad eterna.</p>
+        <button id="btnSorprise" class="mt-6 px-6 py-3 bg-pink-500 text-white rounded-full shadow-lg hover:bg-pink-700 transition-transform transform hover:scale-105">
+            ¡Presiona para una sorpresa!
+        </button>
+        <p id="mensaje" class="mt-4 text-3xl text-pink-700 hidden romantic-font">Te amo más de lo que las palabras pueden decir. 💕</p>
+
+        <!-- Video oculto inicialmente -->
+        <div id="videoContainer" class="mt-6 hidden">
+            <video id="videoSorpresa" width="300" height="600" controls>
+                <source src="WhatsApp Video 2025-02-14 at 15.36.38.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+   
+    <!-- Carrusel de recuerdos -->
+    <div class="mt-10 p-6 bg-white shadow-lg rounded-2xl text-center max-w-2xl mx-auto">
+        <h2 class="text-4xl font-semibold text-pink-600 romantic-font">Álbum de Recuerdos 📸</h2>
+        <div class="relative mt-4">
+            <div class="carousel overflow-hidden relative">
+                <div class="flex transition-transform duration-500 ease-in-out" id="recuerdosCarousel">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.24 (1).jpeg" alt="Recuerdo 1" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.25 (1).jpeg" alt="Recuerdo 2" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.25.jpeg" alt="Recuerdo 3" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.26 (1).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.26 (2).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.26 (3).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.26.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.27.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.28 (1).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.28.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.29.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.30 (1).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.31 (1).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.30.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.30 (2).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.31.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.32.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.33 (1).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.33 (2).jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                    <img src="WhatsApp Image 2025-02-12 at 19.23.33.jpeg" alt="Recuerdo 4" class="w-full h-96 object-cover rounded-2xl shadow-md">
+                </div>
+            </div>
+            <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full" onclick="moveCarousel('left')">
+                &#8249;
+            </button>
+            <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 p-2 rounded-full" onclick="moveCarousel('right')">
+                &#8250;
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- Carrusel de música -->
+    <div class="mt-10 p-6 bg-white shadow-lg rounded-2xl text-center max-w-2xl mx-auto">
+     
+        <div class="mt-4">
+            <h2 class="text-2xl text-pink-600 romantic-font">Playlist 💕</h2>
+            <a href="https://open.spotify.com/playlist/6uO3wexHvMeKRXQVSvys96?si=9JOMbbtMSqGaVnwH4Sh6rg&pi=gwQBlf-EQqu6B" target="_blank" class="text-pink-600 underline text-lg hover:text-pink-800">Escuchar en Spotify 🎵</a>
+        </div>
+    </div>
+    
+    <div class="mt-10 p-6 bg-white shadow-lg rounded-2xl text-center max-w-2xl mx-auto">
+        <h2 class="text-4xl font-semibold text-pink-600 romantic-font">Cartas de Amor 💌</h2>
+        <p class="mt-4 text-lg italic">Mis palabras más sinceras para ti...</p>
+        <div class="mt-4 p-4 bg-pink-200 rounded-2xl shadow-md">
+            <p class="text-lg romantic-font">Cada día a tu lado es un regalo. Eres la luz que ilumina mi vida y la razón de mi felicidad. 💖</p>
+        </div>
+        <div class="mt-4 p-4 bg-pink-200 rounded-2xl shadow-md">
+            <p class="text-lg romantic-font">Siempre estaré contigo, en cada risa, en cada abrazo y en cada momento que compartimos. 💕</p>
+        </div>
+        <div class="mt-4 p-4 bg-pink-200 rounded-2xl shadow-md">
+            <p class="text-lg romantic-font">Te amo con cada latido de mi corazón, eres mi mayor tesoro. 💓</p>
+        </div>
+    </div>
+    
+    <div class="mt-10 p-6 bg-white shadow-lg rounded-2xl text-center max-w-2xl mx-auto">
+        <h2 class="text-4xl font-semibold text-pink-600 romantic-font">Poemas de Amor ✨</h2>
+        <p class="mt-4 text-lg italic">Unas palabras que reflejan mi amor por ti...</p>
+        <div class="mt-4 p-4 bg-pink-200 rounded-2xl shadow-md">
+            <p class="text-lg romantic-font">Si pudiera darte un regalo, te daría mi corazón envuelto en estrellas, para que brille por siempre a tu lado. 🌟</p>
+        </div>
+        <div class="mt-4 p-4 bg-pink-200 rounded-2xl shadow-md">
+            <p class="text-lg romantic-font">Eres la melodía más hermosa en la sinfonía de mi vida. 🎶</p>
+        </div>
+    </div>
+    
+    <div class="mt-10 p-6 bg-white shadow-lg rounded-2xl text-center max-w-2xl mx-auto">
+        <h2 class="text-4xl font-semibold text-pink-600 romantic-font">Dedicatoria Especial 💝</h2>
+        <p class="mt-4 text-lg italic">Este espacio está dedicado a ti, mi amor, mi inspiración eterna...</p>
+        <p class="mt-4 text-lg romantic-font">Desde el primer día que te vi, supe que eras la persona con la que quería compartir mi vida. Cada momento a tu lado es un tesoro que guardo en mi corazón. Eres mi felicidad, mi paz y mi mayor amor. 💞</p>
+    </div>
+
+      <!-- Modal para imagen ampliada -->
+<div id="imageModal" class="modal hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" class="modal-content">
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
